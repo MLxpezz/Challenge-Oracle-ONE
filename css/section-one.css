@@ -74,7 +74,7 @@ body {
 .banner-container {
   width: 100vw;
   height: 352px;
-  background-image: url("/img/fondoe.jpg");
+  background-image: url("../img/fondoe.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
