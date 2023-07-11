@@ -70,6 +70,11 @@ body {
   justify-content: center;
 }
 
+.nav-container__btn-login a {
+  text-decoration: none;
+  color: #2a7ae4;
+}
+
 /*BANNER*/
 .banner-container {
   width: 100vw;
