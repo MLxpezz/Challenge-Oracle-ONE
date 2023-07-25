@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+.form-newProduct-container {
+  background-color: #f5f5f5;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+}
+
+.form-newProduct-container p {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.form-newProduct-container .form-newProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.form-newProduct-container .input-container {
+  position: relative;
+}
+
+.form-newProduct-container .input-container .label {
+  font-size: 12px;
+  color: #ccc;
+  position: absolute;
+  padding: 10px;
+}
+
+.form-newProduct-container .input-container input {
+  width: 559px;
+  height: 56px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 16px;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.form-newProduct-container .form-newProduct #description {
+  width: 559px;
+  height: 82px;
+  resize: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 20px 10px;
+  font-size: 16px;
+}
+
+.form-newProduct-container .form-newProduct #description::placeholder {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.form-newProduct-container .form-newProduct .addProduct {
+    width: 559px;
+    height: 51px;
+    font-size: 16px;
+    padding: 16px;
+    background-color: #2a7ae4;
+    color: #f5f5f5;
+    border: none;
+}
+
+@media screen and (max-width: 912px){
+    .form-newProduct-container .input-container input {
+        width: 704px;
+      }
+
+      .form-newProduct-container .form-newProduct #description {
+        width: 704px;
+      }
+
+      .form-newProduct-container .form-newProduct .addProduct {
+        width: 704px;
+    }
+}
+
+@media screen and (max-width: 414px){
+    .form-newProduct-container .input-container input {
+        width: 382px;
+      }
+
+      .form-newProduct-container .form-newProduct #description {
+        width: 382px;
+      }
+
+      .form-newProduct-container .form-newProduct .addProduct {
+        width: 382px;
+    }
+}
