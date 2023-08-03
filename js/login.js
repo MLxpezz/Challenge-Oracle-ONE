@@ -31,7 +31,7 @@ btnLogin.addEventListener('click', e => {
             console.log(email.value, password.value);
             if(email.value === data.email && password.value === data.password) {
                 console.log('Inicio de sesion correcto');
-                window.location.href = '../index.html';
+                window.location.href = '../html/products.html';
             }else {
                 console.log('No existe esa cuenta');
             }

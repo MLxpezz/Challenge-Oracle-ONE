@@ -1,119 +1,144 @@
 {
-    "perfil": [
-      {
-        "email": "usuario@hotmail.com",
-        "password": "usuario123",
-        "id": "1"
-      }
-    ],
-    "productos": [
-                {
-                    "categoria": "star-wars",
-                    "url_img": "./img/store-img/item-1.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "star-wars",
-                    "url_img": "./img/store-img/item-2.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00" 
-                },
-                {
-                    "categoria": "star-wars",
-                    "url_img": "./img/store-img/item-3.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "star-wars",
-                    "url_img": "./img/store-img/item-4.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "star-wars",
-                    "url_img": "./img/store-img/item-5.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "star-wars",
-                    "url_img": "./img/store-img/item-6.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "consolas",
-                    "url_img": "./img/store-img/consola-1.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "consolas",
-                    "url_img": "./img/store-img/consola-2.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "consolas",
-                    "url_img": "./img/store-img/consola-3.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "consolas",
-                    "url_img": "./img/store-img/consola-4.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "consolas",
-                    "url_img": "./img/store-img/consola-5.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "consolas",
-                    "url_img": "./img/store-img/consola-6.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "diversos",
-                    "url_img": "./img/store-img/diverso-1.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "diversos",
-                    "url_img": "./img/store-img/diverso-2.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "diversos",
-                    "url_img": "./img/store-img/diverso-3.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "diversos",
-                    "url_img": "./img/store-img/diverso-4.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "diversos",
-                    "url_img": "./img/store-img/diverso-5.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                },
-                {
-                    "categoria": "diversos",
-                    "url_img": "./img/store-img/diverso-6.png",
-                    "nombre": "Producto XYZ",
-                    "precio": "60.00"
-                }
-            ]  
-  }
+  "perfil": [
+    {
+      "email": "usuario@hotmail.com",
+      "password": "usuario123",
+      "id": "1"
+    }
+  ],
+  "productos": [
+    {
+      "url_img": "./img/store-img/item-1.png",
+      "nombre": "Producto XYZ",
+      "categoria": "star-wars",
+      "precio": "600.00",
+      "id": "1"
+    },
+    {
+      "categoria": "star-wars",
+      "url_img": "./img/store-img/item-2.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "2"
+    },
+    {
+      "categoria": "star-wars",
+      "url_img": "./img/store-img/item-3.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "3"
+    },
+    {
+      "categoria": "star-wars",
+      "url_img": "./img/store-img/item-4.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "4"
+    },
+    {
+      "categoria": "star-wars",
+      "url_img": "./img/store-img/item-5.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "5"
+    },
+    {
+      "categoria": "star-wars",
+      "url_img": "./img/store-img/item-6.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "6"
+    },
+    {
+      "categoria": "consolas",
+      "url_img": "./img/store-img/consola-1.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "7"
+    },
+    {
+      "categoria": "consolas",
+      "url_img": "./img/store-img/consola-2.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "8"
+    },
+    {
+      "categoria": "consolas",
+      "url_img": "./img/store-img/consola-3.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "9"
+    },
+    {
+      "categoria": "consolas",
+      "url_img": "./img/store-img/consola-4.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "10"
+    },
+    {
+      "categoria": "consolas",
+      "url_img": "./img/store-img/consola-5.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "11"
+    },
+    {
+      "categoria": "consolas",
+      "url_img": "./img/store-img/consola-6.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "12"
+    },
+    {
+      "categoria": "diversos",
+      "url_img": "./img/store-img/diverso-1.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "13"
+    },
+    {
+      "categoria": "diversos",
+      "url_img": "./img/store-img/diverso-2.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "14"
+    },
+    {
+      "categoria": "diversos",
+      "url_img": "./img/store-img/diverso-3.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "15"
+    },
+    {
+      "categoria": "diversos",
+      "url_img": "./img/store-img/diverso-4.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "16"
+    },
+    {
+      "categoria": "diversos",
+      "url_img": "./img/store-img/diverso-5.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "17"
+    },
+    {
+      "categoria": "diversos",
+      "url_img": "./img/store-img/diverso-6.png",
+      "nombre": "Producto XYZ",
+      "precio": "60.00",
+      "id": "18"
+    },
+    {
+      "url_img": "./img/store-img/consola-1.png",
+      "nombre": "pruebaaaaaaaaaa",
+      "categoria": "consolas",
+      "precio": "60000.00",
+      "id": "ad95a661-f9d7-4bcd-bb45-e24f0a259091"
+    }
+  ]
+}
