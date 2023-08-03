@@ -66,7 +66,7 @@
   color: #ccc;
 }
 
-.form-newProduct-container .form-newProduct .addProduct {
+.form-newProduct-container .form-newProduct .addProduct, .editProduct {
     width: 559px;
     height: 51px;
     font-size: 16px;
@@ -85,7 +85,7 @@
         width: 704px;
       }
 
-      .form-newProduct-container .form-newProduct .addProduct {
+      .form-newProduct-container .form-newProduct .addProduct, .editProduct {
         width: 704px;
     }
 }
@@ -99,7 +99,7 @@
         width: 382px;
       }
 
-      .form-newProduct-container .form-newProduct .addProduct {
+      .form-newProduct-container .form-newProduct .addProduct, .editProduct {
         width: 382px;
     }
 }

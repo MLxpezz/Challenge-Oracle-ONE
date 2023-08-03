@@ -1,6 +1,3 @@
-
-
-
 const productController = async () => {
     const res = await fetch(`http://localhost:3000/productos`);
     return await res.json();
@@ -10,6 +7,11 @@ const loginController = async () => {
     const res = await fetch(`http://localhost:3000/perfil`);
     return await res.json();
 };
+
+const itemDetail = async (id) => {
+    const res = await fetch(`http://localhost:3000/productos/${id}`);
+    return await res.json();
+}
 
 const deleteItem = async (id) => {
     return await fetch(`http://localhost:3000/productos/${id}`, {
@@ -41,6 +43,7 @@ const addItem = async (url_img, nombre, categoria, precio) => {
 
 export const controller = {
     productController,
+    itemDetail,
     loginController,
     deleteItem,
     updateItem,

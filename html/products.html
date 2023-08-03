@@ -12,68 +12,71 @@
     <link rel="stylesheet" href="../css/section-one.css" />
     <link rel="stylesheet" href="../css/products.css" />
     <title>Productos</title>
-
   </head>
   <body>
-
     <!--NAV-->
     <nav class="nav-container">
-        <div class="logo-container">
-          <img class="logo" src="../img/Logo.png" alt="logo" />
-          <div class="input-container">
-            <input type="text" placeholder="¿Qué deseas buscar?" />
-            <img src="../img/search.svg" alt="search" />
-          </div>
+      <div class="logo-container">
+        <img class="logo" src="../img/Logo.png" alt="logo" />
+        <div class="input-container">
+          <input type="text" placeholder="¿Qué deseas buscar?" />
+          <img src="../img/search.svg" alt="search" />
         </div>
-  
-        <div class="nav-mobile">
-          <img class="logo" src="../img/Logo.png" alt="logo" />
-          <img class="nav-mobile__search" src="../img/search.svg" alt="search" />
+      </div>
+
+      <div class="nav-mobile">
+        <img class="logo" src="../img/Logo.png" alt="logo" />
+        <img class="nav-mobile__search" src="../img/search.svg" alt="search" />
+      </div>
+    </nav>
+
+    <!--PRODUCTS-->
+    <section class="products-container">
+      <div class="products-header">
+        <div class="header">
+          <h2 class="header-title">Todos los productos</h2>
+          <button class="header-btn">Agregar producto</button>
         </div>
-      </nav>
+        <div class="products"></div>
+      </div>
+    </section>
 
-      <!--PRODUCTS-->
-      <section class="products-container">
-        <div class="products-header">
-            <div class="header">
-                <h2 class="header-title">Todos los productos</h2>
-                <button class="header-btn">Agregar producto</button>
-            </div>
-            <div class="products">
-                    
-        </div>
-      </section>
-
-
-      <!--CONTACT-->
+    <!--CONTACT-->
     <section class="contact-container">
-        <div class="contact">
-            <img src="../img/Logo.png" alt="logo">
-            <div class="contact-links">
-                <p>Quienes somos</p>
-                <p>Politica de privacidad</p>
-                <p>Programa de fidelidad</p>
-                <p>Nuestras tiendas</p>
-                <p>Quiero ser franquiciado</p>
-                <p>Anúncie aqui</p>
-            </div>
-            <div class="contact-form">
-                <form action="" class="form">
-                    <h5>Hable con nosotros</h5>
-                    <div class="form__input-container">
-                        <label for="name">Nombre</label>
-                        <input type="text" name="name" id="name" data-name>
-                    </div>
-                    <textarea name="message" id="message" cols="30" rows="10" data-message placeholder="Escribe tu mensaje"></textarea>
-                    <button class="form__btn">Enviar mensaje</button>
-                </form>
-            </div>
+      <div class="contact">
+        <img src="../img/Logo.png" alt="logo" />
+        <div class="contact-links">
+          <p>Quienes somos</p>
+          <p>Politica de privacidad</p>
+          <p>Programa de fidelidad</p>
+          <p>Nuestras tiendas</p>
+          <p>Quiero ser franquiciado</p>
+          <p>Anúncie aqui</p>
         </div>
+        <div class="contact-form">
+          <form action="" class="form">
+            <h5>Hable con nosotros</h5>
+            <div class="form__input-container">
+              <label for="name">Nombre</label>
+              <input type="text" name="name" id="name" data-name />
+            </div>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              data-message
+              placeholder="Escribe tu mensaje"
+            ></textarea>
+            <button class="form__btn">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
     </section>
 
     <!--FOOTER-->
     <footer class="footer-container">
-        <p>Desarrollado por Mauricio López 2023</p>
+      <p>Desarrollado por Mauricio López 2023</p>
     </footer>
 
     <script type="module" src="../js/productController.js"></script>
