@@ -20,6 +20,8 @@ const createItem = (data) => {
   item.appendChild(prize);
 
   if (window.location.pathname == "/html/products.html") {
+    img.src = `.${data.url_img}`;
+
     const edit = document.createElement("img");
     edit.classList = "edit";
     edit.src = "../img/edite-img.svg";
