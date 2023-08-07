@@ -32,6 +32,7 @@ const updateItem = async (url_img ,nombre, categoria, precio, id) => {
 };
 
 const addItem = async (url_img, nombre, categoria, precio) => {
+    console.log(url_img);
     return fetch(`http://localhost:3000/productos/`, {
         method: "POST",
         headers: {
