@@ -33,7 +33,7 @@ const createItem = (data) => {
   deleteItem.src = "../img/delete-img.svg";
   deleteItem.addEventListener("click", (e) => {
     controller.deleteItem(data.id).then(res => {
-      window.location.href = '../html/products.html';
+      location.reload();
     });
   });
   item.appendChild(deleteItem);
