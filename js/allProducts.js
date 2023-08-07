@@ -33,7 +33,7 @@ const createItem = (data) => {
   deleteItem.src = "../img/delete-img.svg";
   deleteItem.addEventListener("click", (e) => {
     controller.deleteItem(data.id).then(res => {
-      location.reload();
+      window.location.reload();
     });
   });
   item.appendChild(deleteItem);
