@@ -32,7 +32,9 @@ const createItem = (data) => {
   deleteItem.classList = "delete";
   deleteItem.src = "../img/delete-img.svg";
   deleteItem.addEventListener("click", (e) => {
-    controller.deleteItem(data.id);
+    controller.deleteItem(data.id).then(res => {
+      window.location.href = '../html/products.html';
+    });
   });
   item.appendChild(deleteItem);
 
