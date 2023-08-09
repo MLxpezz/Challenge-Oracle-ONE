@@ -39,7 +39,7 @@
   padding: 10px;
 }
 
-.form-newProduct-container .input-container input {
+.form-newProduct-container .input-container input, #category {
   width: 559px;
   height: 56px;
   border: none;

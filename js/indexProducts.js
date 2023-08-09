@@ -20,11 +20,11 @@ const createItem = (data) => {
   return item;
 };
 
-controller.productController().then((res) => {
-    res.forEach((star) => {
-      const categoryElement = document.getElementById(star.categoria); 
-      if (categoryElement) {
-        categoryElement.appendChild(createItem(star));
-      }
-    });
+controller.dataItems().then(info => {
+  Object.keys(info).forEach(item => {
+    const categoryElement = document.getElementById(info[item].categoria);
+    if(categoryElement) {
+      categoryElement.appendChild(createItem(info[item]));
+    }
   });
+});

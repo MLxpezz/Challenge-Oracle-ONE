@@ -9,7 +9,7 @@ const createItem = (data) => {
 
   const img = document.createElement("img");
   img.classList = "img";
-  img.src = data.url_img.startsWith('./') ? `.${data.url_img}` : data.url_img;
+  img.src = data.url_img;
   item.appendChild(img);
 
   const name = document.createElement("p");
@@ -32,7 +32,7 @@ const createItem = (data) => {
   deleteItem.classList = "delete";
   deleteItem.src = "../img/delete-img.svg";
   deleteItem.addEventListener("click", (e) => {
-    controller.deleteItem(data.id).then(res => {
+    controller.removeItem(data.id).then(res => {
       window.location.reload();
     });
   });
@@ -45,11 +45,11 @@ const createItem = (data) => {
   return item;
 };
 
-controller.productController().then((res) => {
-    res.forEach((star) => {
-      products.appendChild(createItem(star));
-    });
-  });
+controller.dataItems().then(info => {
+  Object.keys(info).forEach(item => {
+    products.appendChild(createItem(info[item]));
+  })
+})
 
 btnAdd.addEventListener("click", (e) => {
   window.location.href = "../html/addProduct.html";

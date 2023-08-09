@@ -9,12 +9,18 @@ const editProduct = document.querySelector(".editProduct");
 (() => {
   const url = new URL(window.location);
   const id = url.searchParams.get("id");
+  console.log(id);
 
-  controller.itemDetail(id).then((res) => {
+  controller.detailItem(id).then((res) => {
     nameInput.value = res.nombre;
     urlInput.value = res.url_img;
     prizeInput.value = res.precio;
-    categoryInput.value = res.categoria;
+    
+    for(let i = 0; i < categoryInput.options.length; i++) {
+      if(categoryInput.options[i].innerHTML == res.categoria) {
+        categoryInput.options[i].selected = true;
+      }
+    }
   });
 })();
 
@@ -25,8 +31,8 @@ editProduct.addEventListener("click", (e) => {
   controller
     .updateItem(
       urlInput.value,
-      nameInput.value,
-      categoryInput.value,
+      nameInput.value,  
+      categoryInput.options[categoryInput.selectedIndex].textContent,   
       prizeInput.value,
       id
     )

@@ -9,8 +9,7 @@ const addProduct = document.querySelector(".addProduct");
 
 addProduct.addEventListener("click", (e) => {
   e.preventDefault();
-  controller.addItem(urlInput.value, nameInput.value, categoryInput.value, prizeInput.value).then(res => {
-    window.location.href = "../html/products.html";
-  });
+  controller.addItem(urlInput.value, nameInput.value, categoryInput.options[categoryInput.selectedIndex].textContent, prizeInput.value)
+  .then(res => window.location.href = '../html/products.html');
 });
 

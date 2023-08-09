@@ -26,8 +26,9 @@ const validarCorreo = () => {
 
 btnLogin.addEventListener('click', e => {
     e.preventDefault();
-    controller.loginController().then(res => {
+    controller.dataUser().then(res => {
         res.forEach(data => {
+            console.log(data.email, data.password);
             console.log(email.value, password.value);
             if(email.value === data.email && password.value === data.password) {
                 console.log('Inicio de sesion correcto');
