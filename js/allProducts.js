@@ -24,7 +24,7 @@ const createItem = (data) => {
   edit.classList = "edit";
   edit.src = "../img/edite-img.svg";
   edit.addEventListener("click", (e) => {
-    window.location.href = `/html/editProduct.html?id=${data.id}`;
+    window.location.href = `../html/editProduct.html?id=${data.id}`;
   });
   item.appendChild(edit);
 
