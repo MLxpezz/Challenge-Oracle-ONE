@@ -12,12 +12,12 @@ controller.isLogin().then(login => {
   } else{
     btnLogin.textContent = 'Login';
     btnLogin.addEventListener('click', e => {
-      window.location.href = '../html/login.html';
+      window.location.href = './html/login.html';
     });
   }
 })
 
-seeItems.forEach(button => button.addEventListener('click', e => {window.location.href = '../html/products.html'}));
+seeItems.forEach(button => button.addEventListener('click', e => {window.location.href = './html/products.html'}));
 
 const createItem = (data) => {
   const item = document.createElement("div");
