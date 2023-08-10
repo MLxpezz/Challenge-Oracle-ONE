@@ -2,21 +2,25 @@ import { controller } from "./requests.js";
 
 const btnAdd = document.querySelector(".header-btn");
 const products = document.querySelector(".products");
-const btnLogin = document.getElementById('login');
-const addBtn = document.getElementById('addBtn');
+const btnLogin = document.querySelectorAll(".loginBtn");
+const addBtn = document.getElementById("addBtn");
 
-controller.isLogin().then(login => {
-  if(login) {
-    addBtn.style.display = 'block';
-    btnLogin.textContent = 'Cerrar sesion';
-    btnLogin.addEventListener('click', e => {
-      controller.sign_Out();
+controller.isLogin().then((login) => {
+  if (login) {
+    addBtn.style.display = "block";
+    btnLogin.forEach((button) => {
+      button.textContent = "Cerrar sesion";
+      button.addEventListener("click", (e) => {
+        controller.sign_Out();
+      });
     });
-  } else{
-    addBtn.style.display = 'none';
-    btnLogin.textContent = 'Login';
-    btnLogin.addEventListener('click', e => {
-      window.location.href = '../html/login.html';
+  } else {
+    addBtn.style.display = "none";
+    btnLogin.forEach((button) => {
+      button.textContent = "Login";
+      button.addEventListener("click", (e) => {
+        window.location.href = `../html/login.html`;
+      });
     });
   }
 });
