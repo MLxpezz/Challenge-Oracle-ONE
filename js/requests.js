@@ -11,6 +11,13 @@ import {
   get,
   set,
 } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -32,6 +39,37 @@ const analytics = getAnalytics(app);
 
 const db = getDatabase();
 const products = ref(db, "productos/");
+
+const sign_Out = () => {
+  const auth = getAuth();
+  signOut(auth).then(sign => {
+    window.location.reload();
+  }).catch(error => {
+    console.log(error);
+  })
+}
+
+const login = (email, password) => {
+  const auth = getAuth();
+  return signInWithEmailAndPassword(auth, email, password);
+};
+
+const isLogin = () => {
+
+  const auth = getAuth();
+
+  return new Promise((resolve, reject) => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        resolve(true); // Usuario autenticado
+      } else {
+        resolve(false); // Usuario no autenticado
+      }
+    }, error => {
+      reject(error);
+    });
+  });
+};
 
 const dataItems = () => {
   return new Promise((resolve, reject) => {
@@ -81,7 +119,7 @@ const detailItem = (id) => {
   });
 };
 
-function updateItem(url_img,  nombre, categoria,precio, id) {
+function updateItem(url_img, nombre, categoria, precio, id) {
   const product = ref(db, `productos/${id}`);
 
   const information = {
@@ -101,9 +139,8 @@ const removeItem = (id) => {
   return remove(product);
 };
 
-const addItem = (url_img,  nombre,categoria, precio) => {
-
-    const id = uuid.v4();
+const addItem = (url_img, nombre, categoria, precio) => {
+  const id = uuid.v4();
 
   const productsRef = ref(db, `productos/${id}`);
 
@@ -115,10 +152,13 @@ const addItem = (url_img,  nombre,categoria, precio) => {
     id,
   };
 
-    return set(productsRef, information);
+  return set(productsRef, information);
 };
 
 export const controller = {
+  login,
+  isLogin,
+  sign_Out,
   dataItems,
   dataUser,
   detailItem,

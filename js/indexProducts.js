@@ -1,5 +1,24 @@
 import { controller } from "./requests.js";
 
+const seeItems = document.querySelectorAll('.seeItems');
+const btnLogin = document.getElementById('login');
+
+controller.isLogin().then(login => {
+  if(login) {
+    btnLogin.textContent = 'Cerrar sesion';
+    btnLogin.addEventListener('click', e => {
+      controller.sign_Out();
+    })
+  } else{
+    btnLogin.textContent = 'Login';
+    btnLogin.addEventListener('click', e => {
+      window.location.href = '../html/login.html';
+    });
+  }
+})
+
+seeItems.forEach(button => button.addEventListener('click', e => {window.location.href = '../html/products.html'}));
+
 const createItem = (data) => {
   const item = document.createElement("div");
   item.classList = "item";

@@ -1,7 +1,7 @@
 import { controller } from "./requests.js";
 
 //constante para saber si esta logeado o no
-const isLogin = false;
+let isLogin = false;
 const email = document.querySelector('.email');
 const password = document.querySelector('.password');
 const btnLogin = document.querySelector('.login');
@@ -26,16 +26,9 @@ const validarCorreo = () => {
 
 btnLogin.addEventListener('click', e => {
     e.preventDefault();
-    controller.dataUser().then(res => {
-        res.forEach(data => {
-            console.log(data.email, data.password);
-            console.log(email.value, password.value);
-            if(email.value === data.email && password.value === data.password) {
-                console.log('Inicio de sesion correcto');
-                window.location.href = '../html/products.html';
-            }else {
-                console.log('No existe esa cuenta');
-            }
-        })
-    });
-})
+    controller.login(email.value, password.value).then((userCredential) => {
+        const user = userCredential.user;
+        window.location.href = '../html/products.html';
+    }).catch(error => console.log(error));
+});
+

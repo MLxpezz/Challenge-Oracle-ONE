@@ -5,14 +5,11 @@
   font-family: "Raleway", sans-serif;
 }
 
-body {
-  overflow-x: hidden;
-}
 
 /*NAV*/
 
 .nav-container {
-  width: 100vw;
+  width: 100%;
   height: 115px;
   display: flex;
   align-items: center;
@@ -82,7 +79,7 @@ body {
 
 /*BANNER*/
 .banner-container {
-  width: 100vw;
+  width: 100%;
   height: 352px;
   background-image: url("../img/fondoe.jpg");
   background-repeat: no-repeat;
@@ -99,7 +96,6 @@ body {
   width: 80%;
   display: flex;
   flex-direction: column;
-
   gap: 16px;
   margin: auto 0 0 auto;
 }
@@ -126,9 +122,14 @@ body {
   justify-content: center;
 }
 
+.banner__btn a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
 /*STORE*/
 .store-container {
-  width: 100vw;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -137,7 +138,7 @@ body {
 }
 
 .store-container .store {
-  width: 1136px;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -178,10 +179,21 @@ body {
   font-weight: 700;
 }
 
+.store-container .store .store-items{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .store-container .store .store-items .item {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.seeItems {
+  cursor: pointer;
 }
 
 .store-container .store .store-items .item p:nth-child(2) {
@@ -202,7 +214,7 @@ body {
 
 /*CONTACT*/
 .contact-container {
-  width: 100vw;
+  width: 100%;
   height: 368px;
   background-color: #eaf2fd;
   display: flex;
@@ -212,7 +224,7 @@ body {
 }
 
 .contact-container .contact {
-  width: 60%;
+  width: 65%;
   margin: auto;
   display: flex;
   align-items: center;
@@ -235,7 +247,6 @@ body {
 .contact-container .contact .contact-form .form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
   gap: 8px;
 }
@@ -295,7 +306,7 @@ body {
 
 /*FOOTER*/
 .footer-container {
-  width: 100vw;
+  width: 100%;
   height: 102px;
   display: flex;
   align-items: center;
@@ -342,6 +353,10 @@ body {
   .store-container .store {
     width: 83%;
   }
+
+  .item img {
+    width: 164px;
+ }
 
   .contact-container .contact {
     width: 90%;
@@ -445,7 +460,12 @@ body {
   .store-container .store .store-items {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
+
+  .item img {
+    width: 140px;
+ }
 
   .contact-container {
     height: auto;

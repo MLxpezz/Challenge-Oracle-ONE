@@ -16,19 +16,19 @@
     <!--NAV-->
     <nav class="nav-container">
       <div class="logo-container">
-        <img class="logo" src="./img/Logo.png" alt="logo" />
+        <a href="./index.html"><img class="logo" src="./img/Logo.png" alt="logo" /></a>
         <div class="input-container">
           <input type="text" placeholder="¿Qué deseas buscar?" />
           <img src="./img/search.svg" alt="search" />
         </div>
       </div>
-      <button class="nav-container__btn-login">
+      <button class="nav-container__btn-login" id="login">
         <a href="./html/login.html">Login</a>
       </button>
 
       <div class="nav-mobile">
-        <img class="logo" src="./img/Logo.png" alt="logo" />
-        <button class="nav-mobile__btn-login">
+        <a href="./index.html"><img class="logo" src="./img/Logo.png" alt="logo" /></a>
+        <button class="nav-mobile__btn-login" id="login">
             <a href="./html/login.html">Login</a>
         </button>
         <img class="nav-mobile__search" src="./img/search.svg" alt="search" />
@@ -39,7 +39,7 @@
       <div class="banner">
         <h1 class="banner__title">Febrero promocional</h1>
         <p class="banner__text">Productos seleccionados con 33% de descuento</p>
-        <button class="banner__btn">Ver consola</button>
+        <button class="banner__btn"><a href="./html/products.html">Ver Consolas</a></button>
       </div>
     </section>
 
@@ -48,7 +48,7 @@
         <div class="store">
             <div class="store__text">
                 <h3>Star Wars</h3>
-                <p>Ver todo -></p>
+                <p class="seeItems">Ver todo -></p>
             </div>
             <div class="store-items" id="star-wars">
             </div>
@@ -56,7 +56,7 @@
         <div class="store">
             <div class="store__text">
                 <h3>Consolas</h3>
-                <p>Ver todo -></p>
+                <p class="seeItems">Ver todo -></p>
             </div>
             <div class="store-items" id="consolas">
             </div>
@@ -64,7 +64,7 @@
         <div class="store">
             <div class="store__text">
                 <h3>Diversos</h3>
-                <p>Ver todo -></p>
+                <p class="seeItems">Ver todo -></p>
             </div>
             <div class="store-items" id="diversos">
             </div>
@@ -74,7 +74,7 @@
     <!--CONTACT-->
     <section class="contact-container">
         <div class="contact">
-            <img src="img/Logo.png" alt="logo">
+          <a href="./index.html"><img class="logo" src="./img/Logo.png" alt="logo" /></a>
             <div class="contact-links">
                 <p>Quienes somos</p>
                 <p>Politica de privacidad</p>
@@ -102,6 +102,7 @@
         <p>Desarrollado por Mauricio López 2023</p>
     </footer>
 
+    
     <script type="module" src="./js/requests.js"></script>
     <script type="module" src="./js/indexProducts.js"></script>
   </body>
