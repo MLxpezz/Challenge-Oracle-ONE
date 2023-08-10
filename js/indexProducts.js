@@ -44,7 +44,7 @@ controller.isLogin().then((login) => {
     btnLogin.forEach((button) => {
       button.textContent = "Login";
       button.addEventListener("click", (e) => {
-        window.location.href = `../../AluraGeek/html/login.html`;
+        window.location.href = `../html/login.html`;
       });
     });
   }
@@ -52,6 +52,6 @@ controller.isLogin().then((login) => {
 
 seeItems.forEach((button) =>
   button.addEventListener("click", (e) => {
-    window.location.href = `../../AluraGeek/html/products.html`;
+    window.location.href = `../html/products.html`;
   })
 );
