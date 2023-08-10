@@ -7,7 +7,7 @@
 
 .form-newProduct-container {
   background-color: #f5f5f5;
-  width: 100vw;
+  width: 100%;
   height: auto;
   display: flex;
   align-items: center;
@@ -30,6 +30,9 @@
 
 .form-newProduct-container .input-container {
   position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .form-newProduct-container .input-container .label {
@@ -91,15 +94,15 @@
 }
 
 @media screen and (max-width: 414px){
-    .form-newProduct-container .input-container input {
-        width: 382px;
+    .form-newProduct-container .input-container input, #category {
+        width: 80vw;
       }
 
       .form-newProduct-container .form-newProduct #description {
-        width: 382px;
+        width: 80vw;
       }
 
       .form-newProduct-container .form-newProduct .addProduct, .editProduct {
-        width: 382px;
+        width: 80vw;
     }
 }
