@@ -41,9 +41,9 @@ controller.isLogin().then(login => {
   } else{
     btnLogin.textContent = 'Login';
     btnLogin.addEventListener('click', e => {
-      window.location.href = '/html/login.html';
+      window.location.href = `${window.location.origin}/html/login.html`;
     });
   }
 })
 
-seeItems.forEach(button => button.addEventListener('click', e => {window.location.href = '/html/products.html'}));
+seeItems.forEach(button => button.addEventListener('click', e => {window.location.href = `${window.location.origin}/html/products.html`}));
