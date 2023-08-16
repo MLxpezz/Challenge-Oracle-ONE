@@ -350,8 +350,17 @@
     display: none;
   }
 
+  .store-container .store .store__text {
+    width: 80vw;
+    margin: auto;
+  }
+
+  .store-container .store .store__text h3{
+    font-size: 22px;
+  }
+
   .store-container .store {
-    width: 83%;
+    width: 95%;
   }
 
   .item img {
@@ -390,6 +399,14 @@
   .contact-container .contact .contact-form .form textarea {
     width: 434px;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .store-container .store .store__text {
+    width: 100%;
+    margin: auto;
+  }
+
 }
 
 @media screen and (max-width: 414px) {
@@ -453,7 +470,7 @@
   }
 
   .store-container .store .store__text {
-    width: 90%;
+    width: 305px;
     margin: auto;
   }
 

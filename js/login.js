@@ -1,34 +1,46 @@
 import { controller } from "./requests.js";
+import { validaFalla, validaOk, validarEmail } from "./validations.js";
 
-//constante para saber si esta logeado o no
-let isLogin = false;
-const email = document.querySelector('.email');
-const password = document.querySelector('.password');
-const btnLogin = document.querySelector('.login');
+const email = document.querySelector(".email");
+const password = document.querySelector(".password");
+const btnLogin = document.querySelector(".login");
 
-const login = () => {
-};
-
-const validarCorreo = () => {
-    const email = document.querySelector('.email');
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if(email.value.trim() !== ''){
-        throw new Error("Campo email vacio");
-    }
-    if(!emailRegex.test(email.value)) {
-        throw new Error('El formato del correo no es el correcto.');
-    }
-
-
-}
-
-btnLogin.addEventListener('click', e => {
-    e.preventDefault();
-    controller.login(email.value, password.value).then((userCredential) => {
+btnLogin.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (validarCampos()) {
+    controller
+      .login(email.value, password.value)
+      .then((userCredential) => {
         const user = userCredential.user;
-        window.location.href = '../html/products.html';
-    }).catch(error => console.log(error));
+        window.location.href = "../html/products.html";
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 });
 
+const validarCampos = () => {
+  const emailValor = email.value;
+  const passValor = password.value;
+  let camposValidos = true;
+
+  if (!emailValor) {
+    validaFalla(email, "El campo no puede estar vacio");
+    camposValidos = false;
+  } else if (!validarEmail(emailValor)) {
+    validaFalla(email, "Formato de email invalido");
+    camposValidos = false;
+  } else {
+    validaOk(email);
+  }
+
+  if (!passValor) {
+    validaFalla(password, "El campo no puede estar vacio");
+    camposValidos = false;
+  } else {
+    validaOk(password);
+  }
+
+  return camposValidos;
+};

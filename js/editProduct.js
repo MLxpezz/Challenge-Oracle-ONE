@@ -1,4 +1,5 @@
 import { controller } from "./requests.js";
+import { validaciones } from "./validations.js";
 
 const nameInput = document.getElementById("name");
 const urlInput = document.getElementById("url");
@@ -15,9 +16,9 @@ const editProduct = document.querySelector(".editProduct");
     nameInput.value = res.nombre;
     urlInput.value = res.url_img;
     prizeInput.value = res.precio;
-    
-    for(let i = 0; i < categoryInput.options.length; i++) {
-      if(categoryInput.options[i].innerHTML == res.categoria) {
+
+    for (let i = 0; i < categoryInput.options.length; i++) {
+      if (categoryInput.options[i].innerHTML == res.categoria) {
         categoryInput.options[i].selected = true;
       }
     }
@@ -28,15 +29,17 @@ editProduct.addEventListener("click", (e) => {
   e.preventDefault();
   const url = new URL(window.location);
   const id = url.searchParams.get("id");
-  controller
-    .updateItem(
-      urlInput.value,
-      nameInput.value,  
-      categoryInput.options[categoryInput.selectedIndex].textContent,   
-      prizeInput.value,
-      id
-    )
-    .then((res) => {
-      window.location.href = "../html/products.html";
-    });
+  if (validaciones(nameInput, urlInput, prizeInput)) {
+    controller
+      .updateItem(
+        urlInput.value,
+        nameInput.value,
+        categoryInput.options[categoryInput.selectedIndex].textContent,
+        prizeInput.value,
+        id
+      )
+      .then((res) => {
+        window.location.href = "../html/products.html";
+      });
+  }
 });
